@@ -10,6 +10,9 @@
         nodejs
         pnpm
         nest-cli
+
+        # Language support
+        vtsls
       ];
     };
   };
