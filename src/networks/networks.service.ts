@@ -1,15 +1,15 @@
-import { Inject, Injectable } from "@nestjs/common";
-import { eq } from "drizzle-orm";
-import { NodePgDatabase } from "drizzle-orm/node-postgres";
-import { CreateNetworkDto } from "./dto/create-network.dto";
-import { DatabaseProvider } from "../database/database";
-import * as schema from "../database/schema";
+import { Inject, Injectable } from '@nestjs/common';
+import { eq } from 'drizzle-orm';
+import { NodePgDatabase } from 'drizzle-orm/node-postgres';
+import { CreateNetworkDto } from './dto/create-network.dto';
+import { DatabaseProvider } from '../database/database';
+import * as schema from '../database/schema';
 
 @Injectable()
 export class NetworksService {
   constructor(
     @Inject(DatabaseProvider) private db: NodePgDatabase<typeof schema>,
-  ) { }
+  ) {}
 
   async create(createNetworkDto: CreateNetworkDto) {
     const { edges } = createNetworkDto;
@@ -31,7 +31,7 @@ export class NetworksService {
       }
 
       return network.id;
-    })
+    });
 
     return this.findOne(networkId);
   }

@@ -8,6 +8,6 @@ import { DatabaseModule } from 'src/database/database.module';
 @Module({
   imports: [NetworksModule, DatabaseModule],
   providers: [NetworksService, RoutingService],
-  controllers: [RoutingController]
+  controllers: [RoutingController],
 })
-export class RoutingModule { }
+export class RoutingModule {}

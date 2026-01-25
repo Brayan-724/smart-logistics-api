@@ -1,5 +1,5 @@
 export type Edge = {
-    from: string;
-    to: string;
-    cost: number;
+  from: string;
+  to: string;
+  cost: number;
 };

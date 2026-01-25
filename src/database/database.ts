@@ -10,7 +10,7 @@ export const databaseProvider = [
   {
     provide: DatabaseProvider,
     inject: [ConfigService],
-    useFactory: async (configService: ConfigService) => {
+    useFactory: (configService: ConfigService) => {
       const connectionString = configService.get<string>('DATABASE_URL');
       const pool = new Pool({
         connectionString,
