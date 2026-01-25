@@ -62,21 +62,17 @@ The algorithm must be able to handle request bodies that include dynamic constra
 2.  **Constraint Filtering:** If the request specifies `constraints: { "avoidHighways": true }`, the algorithm must **temporarily ignore** or assign infinite cost to any edge tagged as a "highway," forcing a compliant, potentially longer route.
 3.  **Error Handling:** Gracefully handle cases where the destination is unreachable or the input nodes are invalid (return `404 Not Found` or `400 Bad Request`).
 
-That's a very common and professional way to handle a take-home project! It sets a clear, modern workflow expectation.
-
-Here is the updated section to insert into the **Submission Checklist** of the `README.md` for the **Smart Logistics Routing API** (Project C).
-
 ---
 
 ## ✅ Submission Checklist & Workflow
 
 A successful submission should include:
 
-* [ ] Complete source code for the REST API.
-* [ ] A working implementation of **Dijkstra's Algorithm** within a service layer.
-* [ ] Clear **TypeScript Interfaces** for `Node`, `Edge`, and the various Request DTOs.
-* [ ] Unit tests using **Jest** for the core routing algorithm (i.e., testing the function that calculates the path directly).
-* [ ] Proof that the Swagger documentation is accessible and accurately reflects all endpoints and data schemas.
+* [x] Complete source code for the REST API.
+* [x] A working implementation of **Dijkstra's Algorithm** within a service layer.
+* [x] Clear **TypeScript Interfaces** for `Node`, `Edge`, and the various Request DTOs.
+* [x] Unit tests using **Jest** for the core routing algorithm (i.e., testing the function that calculates the path directly).
+* [x] Proof that the Swagger documentation is accessible and accurately reflects all endpoints and data schemas.
 
 ### 💻 Submission Workflow
 
