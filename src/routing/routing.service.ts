@@ -4,6 +4,12 @@ import { Edge } from 'src/networks/types/edge';
 
 @Injectable()
 export class RoutingService {
+  /**
+   * Calculate the optimal path using Dijkstra's algorithm.
+   * @param edges The edges of the graph.
+   * @param optimizeRouteDto The optimization parameters.
+   * @returns The optimal path and its total cost.
+   */
   calculatePath(edges: Edge[], optimizeRouteDto: OptimizeRouteDto) {
     const { originNodeId, destinationNodeId, preference } = optimizeRouteDto;
 
